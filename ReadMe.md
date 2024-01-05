@@ -60,3 +60,6 @@ There are Current, Forecast  and Historical air pollution data within the projec
 | High 	      | 9       | 888-1064   | 535-600        | 65-70 	   | 92-100 	  | 214-240         |
 | Very High   | 10      | ⩾1065      | ⩾601 	     | P⩾71 	  | T⩾101 	     |  ⩾241          |
 
+Other parameters that do not affect the AQI calculation:
+NH3: min value 0.1 - max value 200
+NO: min value 0.1 - max value 100
