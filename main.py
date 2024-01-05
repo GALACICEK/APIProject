@@ -1,10 +1,9 @@
 
-import pandas_init as pdinit
+import data_analysis as danalysis
 
 def main():
 
-    print("Hello!")
-    pdinit.pandas_init()
+    danalysis.data_analysis()
 
 
 
