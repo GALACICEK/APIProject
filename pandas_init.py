@@ -4,8 +4,18 @@ from datetime import datetime
 import request_api as reqdata
 
 def convert_to_datetime(unix_timestamp):
-    # Unix zaman damgasını tarih ve saat değerine çevir
+    # Unix zaman damgasını tarih ve saat değerine çevirir
     return datetime.utcfromtimestamp(unix_timestamp)
+
+
+def convert_to_utc(input_datetime):
+    # Tarih ve saat değerini Unix zamanını çevirir
+    unix_timestamp = int(input_datetime.timestamp())
+
+    # Unix zamanını UTC'ye dönüştürür
+    utc_datetime = datetime.utcfromtimestamp(unix_timestamp)
+
+    return utc_datetime
 
 
 def create_dataframe_from_response(response_list):
@@ -35,6 +45,7 @@ def pandas_init():
     df_forecast = create_dataframe_from_response(forecast_response['list'])
     df_historical = create_dataframe_from_response(historical_response['list'])
 
+    return df_current,df_forecast,df_historical
 
-if __name__ == '__main__':
-    pandas_init()
+"""if __name__ == '__data_analaysis__':
+    pandas_init()"""
