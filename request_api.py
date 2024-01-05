@@ -7,8 +7,8 @@ from config.config import Weather_API_KEY
 city = "Ankara"
 country_code = 'TR'
 
-startdate = 1609168752
-enddate = 1703776752
+startdate = 1606435200
+enddate = 1704067140
 
 #End Global Variables
 
@@ -47,10 +47,8 @@ def get_request():
 
     lat,long = get_lat_log(city, country_code)
 
-    #current_response,forecast_response,historical_response = 
-    
     return  request_init(lat,long,startdate,enddate)
 
 
-if __name__ == '__pandas_init__':
-    get_request()
+"""if __name__ == '__pandas_init__':
+    get_request()"""
